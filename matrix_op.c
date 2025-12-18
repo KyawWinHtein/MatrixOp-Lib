@@ -96,13 +96,13 @@ int inverseMatrix(int A[SIZE][SIZE], float R[SIZE][SIZE])
     int i, j;
 
     if (det == 0)
-        return 0;   // Not invertible
-
+        return 0;   
+    
     adjointMatrix(A, adj);
 
     for (i = 0; i < SIZE; i++)
         for (j = 0; j < SIZE; j++)
             R[i][j] = adj[i][j] / (float)det;
 
-    return 1;   // Success
+    return 1;  
 }
